@@ -59,7 +59,7 @@
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Seven Winds Studio",
         productName: "Sherlock",
-        productVersion: "0.5.13.78",
+        productVersion: "0.5.13.79",
         showBanner: unityShowBanner,
       };
 
@@ -75,7 +75,7 @@
         
         var meta = document.createElement('meta');
         meta.name = 'viewport';
-        meta.content = 'initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
         
 
@@ -84,7 +84,7 @@
 
         container.className = "unity-mobile";
 
-        container.style.height = window.innerHeight + "px";
+        container.style.height = window.innerHeight * config.devicePixelRatio + "px";
         window.addEventListener('resize', () => {container.style.height = window.innerHeight + "px";});
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
