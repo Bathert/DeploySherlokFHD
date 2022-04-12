@@ -13,9 +13,8 @@
       <canvas id="unity-canvas"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo">
-         <div id="unity-progress-bar-empty">
-           <div id="unity-progress-bar-full"></div>
-         </div>
+         <div id="unity-progress-bar-empty"></div>
+          <div id="unity-progress-bar-full"></div>
         </div>
       </div>
       <div id="unity-warning"> </div>
@@ -60,7 +59,7 @@
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Seven Winds Studio",
         productName: "Sherlock",
-        productVersion: "0.5.24.170",
+        productVersion: "0.5.24.171",
         showBanner: unityShowBanner,
       };
 
@@ -99,7 +98,7 @@
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
+          progressBarFull.style.backgroundSize = 100 * progress + "%" + " 100%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
         }).catch((message) => {
